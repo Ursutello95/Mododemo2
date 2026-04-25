@@ -11,10 +11,10 @@
     --navy:      #001F5B;
     --blue:      #003DA5;
     --lightblue: #5B8DEF;
-    --dark:      #00102E;
-    --dark2:     #001A4D;
+    --dark:      #000D2B;
+    --dark2:     #001540;
     --dark3:     #002266;
-    --card:      #013399;
+    --card:      #012A7A;
     --accent:    #00C9A7;
     --accent2:   #7FDFD0;
     --teal:      #00C9A7;
@@ -90,7 +90,7 @@ text-align: center; margin-bottom: 48px;
 .page-title h1 {
 font-size: clamp(28px, 4vw, 44px);
 font-weight: 700; line-height: 1.15;
-background: linear-gradient(135deg, #ffffff 20%, #7FDFD0 55%, #00C9A7 100%);
+background: linear-gradient(135deg, #fff 20%, #7FDFD0 60%, #00C9A7 100%);
 -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 background-clip: text;
 margin-bottom: 12px;
@@ -120,7 +120,7 @@ font-size: 11px; font-weight: 700; transition: all 0.3s;
 flex-shrink: 0;
 }
 .step-item.active .step-num {
-background: #003DA5; border-color: #00C9A7;
+background: var(–blue); border-color: var(–blue);
 color: white; box-shadow: 0 0 16px rgba(0,61,165,0.6);
 }
 .step-item.done .step-num {
@@ -143,15 +143,15 @@ to { opacity: 1; transform: translateY(0); }
 
 /* ── CARDS ── */
 .glass-card {
-background: rgba(0,45,140,0.5);
-border: 1px solid rgba(91,141,239,0.3);
+background: rgba(1,42,122,0.35);
+border: 1px solid rgba(91,141,239,0.18);
 border-radius: 20px; padding: 28px;
 backdrop-filter: blur(20px);
 box-shadow: 0 8px 40px rgba(0,0,0,0.35);
 }
 .glass-card-light {
-background: rgba(0,61,165,0.15);
-border: 1px solid rgba(91,141,239,0.25);
+background: rgba(238,244,255,0.04);
+border: 1px solid rgba(91,141,239,0.12);
 border-radius: 16px; padding: 22px;
 }
 
@@ -165,13 +165,13 @@ color: var(–lightblue); margin-bottom: 8px; font-family: ‘Space Mono’, mon
 
 /* Email mockup */
 .email-mock {
-background: #001233;
+background: #1e1030;
 border: 1px solid rgba(91,141,239,0.2);
 border-radius: 16px; overflow: hidden;
 margin-bottom: 24px;
 }
 .email-header {
-background: rgba(0,61,165,0.4);
+background: rgba(0,31,91,0.3);
 padding: 14px 20px;
 display: flex; align-items: center; gap: 12px;
 border-bottom: 1px solid rgba(91,141,239,0.15);
@@ -186,7 +186,7 @@ font-size: 15px; font-weight: 700; flex-shrink: 0;
 .email-from { font-size: 13px; font-weight: 600; }
 .email-subj { font-size: 11px; color: var(–gray); }
 .email-time { font-size: 11px; color: var(–gray); font-family: ‘Space Mono’; }
-.email-body { padding: 20px; font-size: 13.5px; line-height: 1.7; color: #B8D4F0; }
+.email-body { padding: 20px; font-size: 13.5px; line-height: 1.7; color: var(–accent2); }
 .email-body .highlight { color: var(–red); font-weight: 600; }
 
 /* Case selection */
@@ -221,7 +221,7 @@ margin-bottom: 8px; text-transform: uppercase;
 .case-check {
 position: absolute; top: 12px; right: 12px;
 width: 20px; height: 20px; border-radius: 50%;
-background: #003DA5; display: none;
+background: var(–blue); display: none;
 align-items: center; justify-content: center; font-size: 10px;
 }
 .case-card.selected .case-check { display: flex; }
@@ -233,7 +233,7 @@ align-items: center; justify-content: center; font-size: 10px;
 .progress-bar { height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
 .progress-fill {
 height: 100%; width: 0; border-radius: 3px;
-background: linear-gradient(90deg, #003DA5, #00C9A7);
+background: linear-gradient(90deg, var(–blue), var(–accent));
 transition: width 0.05s linear;
 }
 
@@ -245,14 +245,14 @@ margin-bottom: 10px;
 border: 1px solid rgba(91,141,239,0.08);
 transition: all 0.3s; opacity: 0.4;
 }
-.analysis-step.active { opacity: 1; background: rgba(0,61,165,0.25); border-color: rgba(0,201,167,0.4); }
+.analysis-step.active { opacity: 1; background: rgba(0,61,165,0.15); border-color: rgba(91,141,239,0.3); }
 .analysis-step.done { opacity: 1; }
 .step-icon {
 width: 32px; height: 32px; border-radius: 8px;
 background: rgba(0,31,91,0.4); flex-shrink: 0;
 display: flex; align-items: center; justify-content: center; font-size: 15px;
 }
-.analysis-step.active .step-icon { background: #003DA5; }
+.analysis-step.active .step-icon { background: var(–blue); }
 .analysis-step.done .step-icon { background: rgba(0,191,165,0.2); }
 .step-text { font-size: 13px; font-weight: 500; margin-bottom: 2px; }
 .step-detail { font-size: 11px; color: var(–gray); }
@@ -305,7 +305,7 @@ font-size: 12px; font-weight: 700;
 .tone-confused { background: rgba(255,167,38,0.2); color: #FFA726; }
 .ai-quote {
 background: rgba(0,61,165,0.15);
-border-left: 3px solid #00C9A7;
+border-left: 3px solid var(–accent);
 border-radius: 0 10px 10px 0;
 padding: 12px 16px; font-size: 13px;
 color: var(–accent2); font-style: italic; line-height: 1.6;
@@ -383,7 +383,7 @@ transition: all 0.2s; font-family: ‘DM Sans’, sans-serif;
 letter-spacing: 0.3px;
 }
 .btn-primary {
-background: #003DA5;
+background: var(–blue);
 color: white;
 box-shadow: 0 4px 20px rgba(0,61,165,0.4);
 }
@@ -413,20 +413,20 @@ border: 1px solid rgba(0,191,165,0.3);
 
 /* ── SALESFORCE MINI PANEL ── */
 .sf-panel {
-background: rgba(0,61,165,0.12);
-border: 1px solid rgba(0,201,167,0.25);
+background: rgba(0,114,206,0.08);
+border: 1px solid rgba(0,114,206,0.25);
 border-radius: 14px; padding: 16px 20px;
 margin-bottom: 16px;
 }
 .sf-header { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
-.sf-logo { font-size: 11px; font-weight: 700; color: #00C9A7; letter-spacing: 1px; }
+.sf-logo { font-size: 11px; font-weight: 700; color: #60b5f5; letter-spacing: 1px; }
 .sf-field { display: flex; gap: 12px; font-size: 12px; margin-bottom: 6px; }
-.sf-field-key { color: #00C9A7; min-width: 90px; font-weight: 600; }
-.sf-field-val { color: #B8D4F0; }
+.sf-field-key { color: #60b5f5; min-width: 90px; font-weight: 600; }
+.sf-field-val { color: var(–accent2); }
 
 /* ── SLACK NOTIFICATION ── */
 .slack-notif {
-background: #001233;
+background: #001540;
 border: 1px solid rgba(0,31,91,0.4);
 border-left: 4px solid #00C9A7;
 border-radius: 12px; padding: 14px 18px;
@@ -437,7 +437,7 @@ display: none;
 @keyframes slideIn { from { opacity:0; transform: translateX(-12px); } to { opacity:1; transform: translateX(0); } }
 .slack-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
 .slack-icon { font-size: 16px; }
-.slack-channel { font-size: 12px; font-weight: 700; color: #00C9A7; }
+.slack-channel { font-size: 12px; font-weight: 700; color: #5B8DEF; }
 .slack-time { font-size: 11px; color: var(–gray); margin-left: auto; }
 .slack-msg { font-size: 13px; color: #ccc; line-height: 1.6; }
 .slack-msg .s-bold { font-weight: 700; color: white; }
@@ -451,7 +451,7 @@ background: rgba(255,255,255,0.08); padding: 1px 5px; border-radius: 4px;
 .tag { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; padding: 4px 10px; border-radius: 6px; font-weight: 600; }
 .tag-sf { background: rgba(0,114,206,0.15); color: #60b5f5; }
 .tag-zapier { background: rgba(255,80,0,0.15); color: #ff8c42; }
-.tag-slack { background: rgba(0,61,165,0.4); color: #7FDFD0; }
+.tag-slack { background: rgba(0,31,91,0.3); color: #7FDFD0; }
 .tag-ai { background: rgba(0,201,167,0.15); color: #00C9A7; }
 
 .history-item {
@@ -487,170 +487,8 @@ animation: confFall 1.2s ease-out forwards;
 0%   { transform: translateY(0) rotate(0deg); opacity:1; }
 100% { transform: translateY(160px) rotate(540deg); opacity:0; }
 }
-
-/* ── KNOWLEDGE BASE ── */
-.kb-search-bar {
-display: flex; align-items: center; gap: 12px;
-background: rgba(0,45,140,0.4); border: 1.5px solid rgba(0,201,167,0.3);
-border-radius: 12px; padding: 14px 18px; margin-bottom: 24px;
-font-family: ‘Space Mono’, monospace; font-size: 13px; color: #00C9A7;
-}
-.kb-search-icon { font-size: 16px; }
-.kb-typing { color: #7FDFD0; }
-
-.kb-article {
-background: rgba(0,45,140,0.3); border: 1px solid rgba(91,141,239,0.2);
-border-radius: 14px; padding: 16px; margin-bottom: 12px;
-transition: all 0.4s ease; border-left: 3px solid transparent;
-}
-.kb-article:hover { border-left-color: #00C9A7; background: rgba(0,61,165,0.35); }
-.kb-article-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
-.kb-relevance { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 6px; }
-.kb-relevance.high { background: rgba(0,201,167,0.2); color: #00C9A7; }
-.kb-relevance.med  { background: rgba(91,141,239,0.2); color: #5B8DEF; }
-.kb-relevance.low  { background: rgba(255,167,38,0.15); color: #FFA726; }
-.kb-views { font-size: 10px; color: var(–gray); }
-.kb-article-title { font-size: 13px; font-weight: 700; color: white; margin-bottom: 5px; }
-.kb-article-body { font-size: 12px; color: var(–gray); line-height: 1.5; margin-bottom: 8px; }
-.kb-article-footer { display: flex; gap: 6px; flex-wrap: wrap; }
-
-.kb-template-card {
-background: rgba(0,45,140,0.4); border: 1.5px solid rgba(0,201,167,0.3);
-border-radius: 14px; padding: 18px; transition: all 0.4s ease;
-}
-.kb-template-header {
-display: flex; justify-content: space-between; align-items: flex-start;
-margin-bottom: 14px; gap: 10px;
-}
-.kb-template-body {
-font-size: 13px; color: #B8D4F0; line-height: 1.75;
-background: rgba(0,13,43,0.5); border-radius: 8px; padding: 12px;
-border-left: 3px solid #00C9A7;
-}
-
-.kb-pattern-alert {
-background: rgba(255,167,38,0.08); border: 1px solid rgba(255,167,38,0.25);
-border-radius: 12px; padding: 14px 16px; transition: all 0.4s ease;
-}
-
-/* ── REPORT ── */
-.report-slack-wrap {
-background: #001233; border: 1px solid rgba(0,201,167,0.2);
-border-radius: 16px; overflow: hidden; margin-bottom: 24px;
-}
-.report-slack-header {
-background: rgba(0,31,91,0.6); padding: 14px 20px;
-display: flex; align-items: center; gap: 10px;
-border-bottom: 1px solid rgba(91,141,239,0.15);
-}
-.report-slack-body { padding: 22px; }
-.report-title-row { margin-bottom: 16px; }
-.report-week-badge {
-font-size: 11px; font-weight: 700; letter-spacing: 1px;
-padding: 4px 12px; background: rgba(0,61,165,0.3);
-border: 1px solid rgba(91,141,239,0.3); border-radius: 20px;
-color: #5B8DEF; font-family: ‘Space Mono’, monospace;
-}
-.report-ai-summary {
-background: rgba(0,45,140,0.3); border: 1px solid rgba(0,201,167,0.2);
-border-radius: 12px; padding: 14px 16px; margin-bottom: 20px;
-display: flex; gap: 12px; align-items: flex-start;
-}
-.report-ai-icon { font-size: 22px; flex-shrink: 0; }
-#reportAiText { font-size: 13px; color: #B8D4F0; line-height: 1.65; flex: 1; min-height: 48px; }
-
-.report-metrics-grid {
-display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
-margin-bottom: 20px;
-}
-@media (max-width: 640px) { .report-metrics-grid { grid-template-columns: repeat(2,1fr); } }
-.report-metric {
-background: rgba(0,45,140,0.35); border: 1px solid rgba(91,141,239,0.15);
-border-radius: 12px; padding: 14px 12px; text-align: center;
-}
-.report-metric-val { font-size: 26px; font-weight: 700; font-family: ‘Space Mono’, monospace; line-height: 1.1; }
-.report-metric-label { font-size: 10px; color: var(–gray); margin-top: 4px; }
-.report-metric-delta { font-size: 10px; margin-top: 4px; }
-.delta-up { color: #00C9A7; }
-.delta-down { color: var(–red); }
-
-.report-pattern-row {
-display: flex; align-items: center; gap: 10px;
-margin-bottom: 8px;
-}
-.report-pattern-bar {
-height: 6px; border-radius: 3px;
-background: linear-gradient(90deg, #003DA5, #00C9A7);
-min-width: 20px; flex-shrink: 0;
-}
-.report-pattern-label { font-size: 12px; color: #B8D4F0; flex: 1; }
-.report-pattern-count { font-size: 11px; color: var(–gray); font-family: ‘Space Mono’, monospace; }
-
-.report-top-agent {
-display: flex; align-items: center; gap: 12px;
-background: rgba(0,201,167,0.08); border: 1px solid rgba(0,201,167,0.25);
-border-radius: 12px; padding: 14px 16px; margin-top: 18px;
-font-size: 24px; transition: all 0.4s ease;
-}
-
-/* ── COACHING ── */
-.coaching-dm {
-background: #001233; border: 1px solid rgba(91,141,239,0.2);
-border-radius: 14px; overflow: hidden;
-}
-.coaching-dm-header {
-background: rgba(0,31,91,0.5); padding: 12px 16px;
-display: flex; align-items: center; gap: 10px;
-border-bottom: 1px solid rgba(91,141,239,0.15);
-}
-.coaching-bot-avatar {
-width: 34px; height: 34px; border-radius: 50%;
-background: linear-gradient(135deg, #003DA5, #00C9A7);
-display: flex; align-items: center; justify-content: center; font-size: 16px;
-}
-.coaching-dm-body { padding: 16px; font-size: 13px; color: #B8D4F0; line-height: 1.7; }
-
-.coaching-score-card {
-background: rgba(0,45,140,0.3); border: 1px solid rgba(91,141,239,0.2);
-border-radius: 14px; padding: 18px;
-}
-.coaching-score-row {
-display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
-}
-.coaching-score-label { font-size: 12px; color: var(–gray); min-width: 110px; }
-.coaching-bar-wrap {
-flex: 1; height: 6px; background: rgba(255,255,255,0.06);
-border-radius: 3px; overflow: hidden;
-}
-.coaching-bar { height: 100%; border-radius: 3px; transition: width 1s ease; }
-.coaching-score-val { font-size: 12px; font-weight: 700; min-width: 36px; text-align: right; font-family: ‘Space Mono’; }
-
-.coaching-chart-wrap {
-background: rgba(0,45,140,0.25); border: 1px solid rgba(91,141,239,0.15);
-border-radius: 14px; padding: 16px;
-}
-
-.coaching-tip-card {
-background: rgba(0,45,140,0.3); border: 1px solid rgba(0,201,167,0.25);
-border-left: 3px solid #00C9A7;
-border-radius: 0 12px 12px 0; padding: 14px 16px;
-}
-
-.coaching-badge-row { display: flex; gap: 8px; flex-wrap: wrap; }
-.coaching-badge {
-display: flex; align-items: center; gap: 6px;
-background: rgba(0,61,165,0.3); border: 1px solid rgba(91,141,239,0.25);
-border-radius: 20px; padding: 6px 12px; font-size: 11px; color: #B8D4F0;
-}
-
-/* step line responsive fix for 8 steps */
-@media (max-width: 900px) {
-.steps-bar { flex-wrap: wrap; justify-content: center; gap: 4px; }
-.step-line { display: none; }
-.step-item span { display: none; }
-}
-
 </style>
+
 </head>
 <body>
 
@@ -664,14 +502,14 @@ border-radius: 20px; padding: 6px 12px; font-size: 11px; color: #B8D4F0;
 
   <header>
     <div class="logo">M O D O <div class="logo-dot"></div></div>
-    <div class="badge">CX Demo · Sistema Completo</div>
+    <div class="badge">CX Demo · Emotional Briefing</div>
   </header>
 
   <!-- PAGE TITLE -->
 
   <div class="page-title">
     <h1>Sistema CX Empático con IA</h1>
-    <p>Flujo completo de atención: casos, Knowledge Base, Plantillas IA, Reportes y Coaching</p>
+    <p>Simulación interactiva del flujo completo: desde que llega un caso hasta el cierre empático</p>
   </div>
 
   <!-- STEPS BAR -->
@@ -700,21 +538,6 @@ border-radius: 20px; padding: 6px 12px; font-size: 11px; color: #B8D4F0;
     <div class="step-item" id="stepItem5">
       <div class="step-num">5</div>
       <span>Cierre</span>
-    </div>
-    <div class="step-line" id="stepLine5"></div>
-    <div class="step-item" id="stepItem6">
-      <div class="step-num">6</div>
-      <span>Knowledge</span>
-    </div>
-    <div class="step-line" id="stepLine6"></div>
-    <div class="step-item" id="stepItem7">
-      <div class="step-num">7</div>
-      <span>Reporte</span>
-    </div>
-    <div class="step-line" id="stepLine7"></div>
-    <div class="step-item" id="stepItem8">
-      <div class="step-num">8</div>
-      <span>Coaching</span>
     </div>
   </div>
 
@@ -1006,261 +829,8 @@ border-radius: 20px; padding: 6px 12px; font-size: 11px; color: #B8D4F0;
 <div class="result-box" id="resultBox"></div>
 
 <div class="btn-row" style="margin-top:28px">
-  <button class="btn btn-primary" onclick="goToScreen6()">📚 Ver Knowledge Base →</button>
-  <button class="btn btn-ghost" onclick="resetDemo()">↺ Reiniciar demo</button>
-</div>
-```
-
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════
-       SCREEN 6 — Knowledge Base + Plantillas IA
-  ═══════════════════════════════════════════════════ -->
-
-  <div class="screen" id="screen6">
-    <div class="section-label">Knowledge Base · Plantillas IA</div>
-    <div class="screen-title">La IA busca en tu base de conocimiento</div>
-    <div class="screen-sub">Artículos relevantes y plantillas adaptadas al cliente — automático</div>
-
-```
-<div class="kb-search-bar">
-  <span class="kb-search-icon">🔍</span>
-  <span id="kbSearchText" class="kb-typing">Buscando: "límite transferencias problema recurrente"...</span>
-</div>
-
-<div class="two-col" style="margin-bottom:24px">
-  <!-- Knowledge Articles -->
-  <div>
-    <div class="section-label" style="margin-bottom:12px">📚 Artículos encontrados</div>
-    <div class="kb-article" id="kba1" style="opacity:0">
-      <div class="kb-article-header">
-        <span class="kb-relevance high">98% relevante</span>
-        <span class="kb-views">👁 342 usos</span>
-      </div>
-      <div class="kb-article-title">Límites de transferencia: causas y soluciones</div>
-      <div class="kb-article-body">Explica cómo funcionan los límites diarios, cómo se reinician y cómo ampliarlos desde la app.</div>
-      <div class="kb-article-footer">
-        <span class="tag tag-ai">✨ IA lo sugiere para este caso</span>
-      </div>
-    </div>
-    <div class="kb-article" id="kba2" style="opacity:0">
-      <div class="kb-article-header">
-        <span class="kb-relevance med">74% relevante</span>
-        <span class="kb-views">👁 189 usos</span>
-      </div>
-      <div class="kb-article-title">Cómo manejar clientes con historial de reclamos</div>
-      <div class="kb-article-body">Protocolo empático para clientes con 2 o más contactos previos sin resolución.</div>
-      <div class="kb-article-footer">
-        <span class="tag tag-zapier">📋 Protocolo CX</span>
-      </div>
-    </div>
-    <div class="kb-article" id="kba3" style="opacity:0">
-      <div class="kb-article-header">
-        <span class="kb-relevance low">61% relevante</span>
-        <span class="kb-views">👁 95 usos</span>
-      </div>
-      <div class="kb-article-title">Escalada a soporte técnico: cuándo y cómo</div>
-      <div class="kb-article-body">Criterios para derivar al equipo técnico manteniendo al cliente informado y contenido.</div>
-      <div class="kb-article-footer">
-        <span class="tag tag-sf">☁ Salesforce</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Plantilla IA adaptada -->
-  <div>
-    <div class="section-label" style="margin-bottom:12px">✨ Plantilla adaptada por IA</div>
-    <div class="kb-template-card" id="kbTemplate" style="opacity:0">
-      <div class="kb-template-header">
-        <div>
-          <div style="font-size:12px;font-weight:700;color:#00C9A7;margin-bottom:4px">Generada para: María González</div>
-          <div style="font-size:11px;color:var(--gray)">Tono: empático · Historial: reincidente · Canal: email</div>
-        </div>
-        <span class="tag tag-ai">IA</span>
-      </div>
-      <div class="kb-template-body" id="kbTemplateBody"></div>
-      <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
-        <button class="btn btn-primary" style="font-size:12px;padding:8px 16px" onclick="goToScreen7()">
-          Usar esta plantilla →
-        </button>
-        <button class="btn btn-ghost" style="font-size:12px;padding:8px 16px" onclick="regenerateTemplate()">
-          🔄 Regenerar
-        </button>
-      </div>
-    </div>
-
-    <div class="kb-pattern-alert" id="kbPattern" style="opacity:0;margin-top:16px">
-      <div style="font-size:12px;font-weight:700;color:#FFA726;margin-bottom:6px">⚠️ Patrón detectado esta semana</div>
-      <div style="font-size:12px;color:#ccc;line-height:1.6">
-        <strong style="color:white">7 clientes</strong> reportaron problemas con límites de transferencia en los últimos 5 días.<br>
-        Zapier ya alertó al canal <span style="color:#00C9A7">#cx-alertas</span> y al equipo de producto.
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="btn-row">
-  <button class="btn btn-primary" onclick="goToScreen7()">📊 Ver Reporte Semanal →</button>
-  <button class="btn btn-ghost" onclick="showScreen(5)">← Volver al cierre</button>
-</div>
-```
-
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════
-       SCREEN 7 — Reporte Semanal
-  ═══════════════════════════════════════════════════ -->
-
-  <div class="screen" id="screen7">
-    <div class="section-label">Zapier → Salesforce → Slack · Cada lunes 8:30am</div>
-    <div class="screen-title">📊 Reporte Semanal Automático</div>
-    <div class="screen-sub">La IA redacta el reporte en lenguaje natural — no solo números</div>
-
-```
-<!-- Slack report mockup -->
-<div class="report-slack-wrap">
-  <div class="report-slack-header">
-    <span style="font-size:13px;font-weight:700">💬 #cx-metricas</span>
-    <span class="tag tag-ai">IA generado</span>
-    <span style="font-size:11px;color:var(--gray);margin-left:auto">Lunes 8:30am</span>
-  </div>
-  <div class="report-slack-body">
-    <div class="report-title-row">
-      <span class="report-week-badge">Semana 16 · Abril 2026</span>
-    </div>
-
-    <div class="report-ai-summary" id="reportAiSummary">
-      <div class="report-ai-icon">🤖</div>
-      <div id="reportAiText" class="typing"></div>
-    </div>
-
-    <div class="report-metrics-grid">
-      <div class="report-metric">
-        <div class="report-metric-val" id="rm1" style="color:#00C9A7">—</div>
-        <div class="report-metric-label">Casos resueltos</div>
-        <div class="report-metric-delta" id="rd1"></div>
-      </div>
-      <div class="report-metric">
-        <div class="report-metric-val" id="rm2" style="color:#5B8DEF">—</div>
-        <div class="report-metric-label">CSAT promedio</div>
-        <div class="report-metric-delta" id="rd2"></div>
-      </div>
-      <div class="report-metric">
-        <div class="report-metric-val" id="rm3" style="color:#FFA726">—</div>
-        <div class="report-metric-label">Tiempo respuesta</div>
-        <div class="report-metric-delta" id="rd3"></div>
-      </div>
-      <div class="report-metric">
-        <div class="report-metric-val" id="rm4" style="color:#00C9A7">—</div>
-        <div class="report-metric-label">Índice empatía</div>
-        <div class="report-metric-delta" id="rd4"></div>
-      </div>
-    </div>
-
-    <div style="margin-top:18px">
-      <div style="font-size:11px;color:var(--gray);margin-bottom:10px;letter-spacing:1px;text-transform:uppercase;font-family:'Space Mono',monospace">Top patrones de la semana</div>
-      <div class="report-pattern-row">
-        <div class="report-pattern-bar" style="width:72%"></div>
-        <span class="report-pattern-label">Límites de transferencia</span>
-        <span class="report-pattern-count">7 casos</span>
-      </div>
-      <div class="report-pattern-row">
-        <div class="report-pattern-bar" style="width:45%"></div>
-        <span class="report-pattern-label">Error al cargar saldo</span>
-        <span class="report-pattern-count">4 casos</span>
-      </div>
-      <div class="report-pattern-row">
-        <div class="report-pattern-bar" style="width:28%"></div>
-        <span class="report-pattern-label">QR no reconocido</span>
-        <span class="report-pattern-count">3 casos</span>
-      </div>
-    </div>
-
-    <div class="report-top-agent" id="reportTopAgent" style="opacity:0">
-      <span>🏆</span>
-      <div>
-        <div style="font-size:12px;font-weight:700;color:white">Agente destacado: <span style="color:#00C9A7">Laura M.</span></div>
-        <div style="font-size:11px;color:var(--gray)">Índice de empatía 94% · CSAT promedio 4.8/5 · 23 casos cerrados</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="btn-row">
-  <button class="btn btn-primary" onclick="goToScreen8()">🎓 Ver Coaching del Agente →</button>
-  <button class="btn btn-ghost" onclick="showScreen(6)">← Volver a Knowledge</button>
-</div>
-```
-
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════
-       SCREEN 8 — Coaching del Agente
-  ═══════════════════════════════════════════════════ -->
-
-  <div class="screen" id="screen8">
-    <div class="section-label">Post-cierre · Mensaje privado en Slack</div>
-    <div class="screen-title">🎓 Coaching Continuo del Agente</div>
-    <div class="screen-sub">Feedback personalizado que la IA envía al agente después de cada caso</div>
-
-```
-<div class="two-col">
-  <div>
-    <div class="section-label" style="margin-bottom:12px">Mensaje privado en Slack</div>
-    <div class="coaching-dm">
-      <div class="coaching-dm-header">
-        <div class="coaching-bot-avatar">🤖</div>
-        <div>
-          <div style="font-size:12px;font-weight:700">CX Coach Bot</div>
-          <div style="font-size:10px;color:var(--gray)">Solo vos lo ves · ahora</div>
-        </div>
-      </div>
-      <div class="coaching-dm-body" id="coachingBody"></div>
-    </div>
-
-    <div class="coaching-score-card" style="margin-top:16px">
-      <div class="section-label" style="margin-bottom:12px">Tu progreso esta semana</div>
-      <div class="coaching-score-row">
-        <span class="coaching-score-label">🫀 Empatía</span>
-        <div class="coaching-bar-wrap"><div class="coaching-bar" style="width:82%;background:#00C9A7"></div></div>
-        <span class="coaching-score-val" style="color:#00C9A7">82%</span>
-      </div>
-      <div class="coaching-score-row">
-        <span class="coaching-score-label">⚡ Velocidad</span>
-        <div class="coaching-bar-wrap"><div class="coaching-bar" style="width:91%;background:#5B8DEF"></div></div>
-        <span class="coaching-score-val" style="color:#5B8DEF">91%</span>
-      </div>
-      <div class="coaching-score-row">
-        <span class="coaching-score-label">📋 Uso Knowledge</span>
-        <div class="coaching-bar-wrap"><div class="coaching-bar" style="width:68%;background:#FFA726"></div></div>
-        <span class="coaching-score-val" style="color:#FFA726">68%</span>
-      </div>
-      <div class="coaching-score-row">
-        <span class="coaching-score-label">⭐ CSAT personal</span>
-        <div class="coaching-bar-wrap"><div class="coaching-bar" style="width:88%;background:#00C9A7"></div></div>
-        <span class="coaching-score-val" style="color:#00C9A7">4.4/5</span>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <div class="section-label" style="margin-bottom:12px">Tu evolución mensual</div>
-    <div class="coaching-chart-wrap">
-      <canvas id="coachingChart" width="400" height="220"></canvas>
-    </div>
-
-    <div class="coaching-tip-card" id="coachingTip" style="margin-top:16px">
-      <div style="font-size:11px;color:#00C9A7;font-weight:700;margin-bottom:8px;letter-spacing:1px">💡 TIP DE LA SEMANA</div>
-      <div style="font-size:13px;color:#B8D4F0;line-height:1.65" id="coachingTipText"></div>
-    </div>
-
-    <div class="coaching-badge-row" id="coachingBadges" style="margin-top:16px"></div>
-  </div>
-</div>
-
-<div class="btn-row" style="margin-top:28px">
   <button class="btn btn-primary" onclick="resetDemo()">↺ Volver al inicio</button>
-  <button class="btn btn-teal" onclick="showScreen(1)">🚀 Nuevo caso</button>
+  <button class="btn btn-teal" onclick="showNextCase()">▶ Siguiente caso →</button>
 </div>
 ```
 
@@ -1362,15 +932,14 @@ function showScreen(n) {
   currentScreen = n;
 
   // update steps
-  for (let i = 1; i <= 8; i++) {
+  for (let i = 1; i <= 5; i++) {
     const item = document.getElementById('stepItem' + i);
-    if (!item) continue;
     item.classList.remove('active','done');
     if (i < n) { item.classList.add('done'); }
     else if (i === n) { item.classList.add('active'); }
-    if (i < 8) {
+    if (i < 5) {
       const line = document.getElementById('stepLine' + i);
-      if (line) line.classList.toggle('done', i < n);
+      line.classList.toggle('done', i < n);
     }
   }
   window.scrollTo({top: 0, behavior:'smooth'});
@@ -1700,264 +1269,6 @@ function showNextCase() {
   resetDemo();
   setTimeout(() => selectCase(nextId), 100);
 }
-
-// ─────────────────────────────────────────────────────────────
-// SCREEN 6 — KNOWLEDGE BASE
-// ─────────────────────────────────────────────────────────────
-function goToScreen6() {
-  showScreen(6);
-  runKBSearch();
-}
-
-function runKBSearch() {
-  // animate articles appearing
-  const articles = ['kba1','kba2','kba3'];
-  articles.forEach((id, i) => {
-    setTimeout(() => {
-      const el = document.getElementById(id);
-      if (el) { el.style.transition = 'all 0.4s ease'; el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }
-    }, 600 + i * 350);
-  });
-
-  // show template after articles
-  setTimeout(() => {
-    const c = cases[selectedCase] || cases[1];
-    const tpl = document.getElementById('kbTemplateBody');
-    if (tpl) tpl.innerHTML = c.template.replace(/
-/g,'<br>');
-    const tc = document.getElementById('kbTemplate');
-    if (tc) { tc.style.transition = 'all 0.5s ease'; tc.style.opacity = '1'; }
-  }, 1500);
-
-  // pattern alert
-  setTimeout(() => {
-    const pa = document.getElementById('kbPattern');
-    if (pa) { pa.style.transition = 'all 0.4s ease'; pa.style.opacity = '1'; }
-  }, 2200);
-
-  // animate search text
-  const searchTexts = [
-    'Buscando: "problema cuenta recurrente"...',
-    'Buscando: "límite transferencia"...',
-    '✓ 3 artículos encontrados · 1 plantilla generada'
-  ];
-  let si = 0;
-  const stEl = document.getElementById('kbSearchText');
-  const stInterval = setInterval(() => {
-    si++;
-    if (si >= searchTexts.length) { clearInterval(stInterval); }
-    if (stEl && si < searchTexts.length) stEl.textContent = searchTexts[si];
-    if (si === searchTexts.length - 1 && stEl) {
-      stEl.style.color = '#00C9A7';
-      stEl.classList.remove('kb-typing');
-    }
-  }, 700);
-}
-
-function regenerateTemplate() {
-  const c = cases[selectedCase] || cases[1];
-  const tpl = document.getElementById('kbTemplateBody');
-  if (!tpl) return;
-  tpl.style.opacity = '0.3';
-  setTimeout(() => {
-    tpl.innerHTML = c.template.replace(/
-/g,'<br>');
-    tpl.style.opacity = '1';
-  }, 600);
-}
-
-// ─────────────────────────────────────────────────────────────
-// SCREEN 7 — WEEKLY REPORT
-// ─────────────────────────────────────────────────────────────
-function goToScreen7() {
-  showScreen(7);
-  runWeeklyReport();
-}
-
-function runWeeklyReport() {
-  // Animate metrics counting up
-  const metrics = [
-    { id: 'rm1', val: '47', delta: '↑ +12 vs semana ant.', cls: 'delta-up' },
-    { id: 'rm2', val: '4.3', delta: '↑ +0.4 vs semana ant.', cls: 'delta-up' },
-    { id: 'rm3', val: '2.1h', delta: '↓ -0.8h vs semana ant.', cls: 'delta-up' },
-    { id: 'rm4', val: '81%', delta: '↑ +6% vs semana ant.', cls: 'delta-up' },
-  ];
-
-  metrics.forEach((m, i) => {
-    setTimeout(() => {
-      const el = document.getElementById(m.id);
-      const del = document.getElementById(m.id.replace('rm','rd'));
-      if (el) el.textContent = m.val;
-      if (del) { del.textContent = m.delta; del.className = 'report-metric-delta ' + m.cls; }
-    }, 400 + i * 250);
-  });
-
-  // Type AI summary
-  const summary = 'Fue una semana positiva para el equipo. El CSAT subió a 4.3/5, impulsado por el uso del Emotional Briefing en el 78% de los casos. El patrón más frecuente fueron problemas con límites de transferencia — 7 casos que ya fueron escalados al equipo de producto. Laura M. se destacó con 94% de índice de empatía. 💙';
-  const el = document.getElementById('reportAiText');
-  if (el) {
-    el.classList.remove('typing');
-    el.textContent = '';
-    let i = 0;
-    el.classList.add('typing');
-    const t = setInterval(() => {
-      el.textContent += summary[i];
-      i++;
-      if (i >= summary.length) { clearInterval(t); el.classList.remove('typing'); }
-    }, 22);
-  }
-
-  // Show top agent
-  setTimeout(() => {
-    const ta = document.getElementById('reportTopAgent');
-    if (ta) { ta.style.transition = 'all 0.5s ease'; ta.style.opacity = '1'; }
-  }, 2800);
-}
-
-// ─────────────────────────────────────────────────────────────
-// SCREEN 8 — COACHING
-// ─────────────────────────────────────────────────────────────
-function goToScreen8() {
-  showScreen(8);
-  runCoaching();
-}
-
-function runCoaching() {
-  // DM message
-  const msgs = [
-    { delay: 300, text: '¡Hola! 👋 Quería darte feedback sobre el caso de hoy con María González.' },
-    { delay: 1200, text: '✅ <strong style="color:#00C9A7">Lo que hiciste muy bien:</strong> Reconociste su frustración al inicio de la respuesta. Eso hizo que el tono bajara antes de dar la solución técnica.' },
-    { delay: 2400, text: '💡 <strong style="color:#FFA726">Oportunidad de mejora:</strong> Usaste la plantilla base sin personalizarla. La próxima vez, agregá el nombre del cliente en el saludo inicial para mayor calidez.' },
-    { delay: 3600, text: '📊 Tu índice de empatía esta semana: <strong style="color:#00C9A7">82%</strong> — ¡vas mejorando! La semana pasada fue 76%. Sigue así 🚀' },
-  ];
-
-  const body = document.getElementById('coachingBody');
-  if (!body) return;
-  body.innerHTML = '';
-  msgs.forEach(m => {
-    setTimeout(() => {
-      const div = document.createElement('div');
-      div.style.cssText = 'margin-bottom:10px;animation:fadeUp 0.3s ease';
-      div.innerHTML = m.text;
-      body.appendChild(div);
-    }, m.delay);
-  });
-
-  // Tip
-  const tips = [
-    'Para clientes reincidentes (2+ contactos), empezá siempre con una frase de reconocimiento explícito: "Entiendo que ya estuviste en contacto con nosotros antes y no recibiste la solución que necesitabas." Esto reduce la fricción inicial un 60%.',
-    'El cliente promedio necesita sentir que fue escuchado antes de estar dispuesto a escuchar tu solución. Dedicá las primeras 2 oraciones 100% a validar su experiencia.',
-  ];
-  const tipEl = document.getElementById('coachingTipText');
-  if (tipEl) tipEl.textContent = tips[Math.floor(Math.random() * tips.length)];
-
-  // Badges
-  const badges = [
-    { icon: '🫀', label: 'Empático' },
-    { icon: '⚡', label: 'Respuesta rápida' },
-    { icon: '📈', label: 'CSAT en alza' },
-    { icon: '🔁', label: '10 casos esta semana' },
-  ];
-  const badgeRow = document.getElementById('coachingBadges');
-  if (badgeRow) {
-    badgeRow.innerHTML = '';
-    badges.forEach((b, i) => {
-      setTimeout(() => {
-        const el = document.createElement('div');
-        el.className = 'coaching-badge';
-        el.innerHTML = `<span>${b.icon}</span> ${b.label}`;
-        el.style.animation = 'fadeUp 0.3s ease';
-        badgeRow.appendChild(el);
-      }, 4000 + i * 200);
-    });
-  }
-
-  // Draw chart
-  setTimeout(() => drawCoachingChart(), 500);
-}
-
-function drawCoachingChart() {
-  const canvas = document.getElementById('coachingChart');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const W = canvas.width, H = canvas.height;
-
-  ctx.clearRect(0, 0, W, H);
-
-  const weeks = ['Ene', 'Feb', 'Mar', 'Abr'];
-  const empathy = [62, 70, 76, 82];
-  const csat    = [58, 65, 72, 88];
-
-  const padL = 30, padR = 16, padT = 16, padB = 32;
-  const chartW = W - padL - padR;
-  const chartH = H - padT - padB;
-
-  // Grid lines
-  ctx.strokeStyle = 'rgba(91,141,239,0.12)';
-  ctx.lineWidth = 1;
-  [0, 25, 50, 75, 100].forEach(v => {
-    const y = padT + chartH - (v / 100) * chartH;
-    ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(W - padR, y); ctx.stroke();
-    ctx.fillStyle = 'rgba(123,155,200,0.6)';
-    ctx.font = '9px Space Mono, monospace';
-    ctx.fillText(v + '%', 0, y + 3);
-  });
-
-  // X labels
-  ctx.fillStyle = 'rgba(123,155,200,0.8)';
-  ctx.font = '10px DM Sans, sans-serif';
-  ctx.textAlign = 'center';
-  weeks.forEach((w, i) => {
-    const x = padL + (i / (weeks.length - 1)) * chartW;
-    ctx.fillText(w, x, H - 6);
-  });
-
-  // Draw lines
-  function drawLine(data, color, dashed) {
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 2.5;
-    ctx.lineJoin = 'round';
-    if (dashed) ctx.setLineDash([5, 4]);
-    else ctx.setLineDash([]);
-    ctx.beginPath();
-    data.forEach((v, i) => {
-      const x = padL + (i / (data.length - 1)) * chartW;
-      const y = padT + chartH - (v / 100) * chartH;
-      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-    });
-    ctx.stroke();
-    // dots
-    ctx.setLineDash([]);
-    data.forEach((v, i) => {
-      const x = padL + (i / (data.length - 1)) * chartW;
-      const y = padT + chartH - (v / 100) * chartH;
-      ctx.beginPath();
-      ctx.arc(x, y, 4, 0, Math.PI * 2);
-      ctx.fillStyle = color; ctx.fill();
-      ctx.fillStyle = '#001233'; ctx.lineWidth = 1.5;
-      ctx.strokeStyle = color; ctx.stroke();
-      if (i === data.length - 1) {
-        ctx.fillStyle = color;
-        ctx.font = 'bold 11px Space Mono, monospace';
-        ctx.textAlign = 'left';
-        ctx.fillText(v + '%', x + 6, y + 4);
-      }
-    });
-  }
-
-  drawLine(empathy, '#00C9A7', false);
-  drawLine(csat,    '#5B8DEF', true);
-
-  // Legend
-  ctx.font = '10px DM Sans';
-  ctx.textAlign = 'left';
-  ctx.fillStyle = '#00C9A7'; ctx.fillRect(padL, padT, 10, 3);
-  ctx.fillStyle = '#B8D4F0'; ctx.fillText('Empatía', padL + 14, padT + 5);
-  ctx.fillStyle = '#5B8DEF'; ctx.fillRect(padL + 70, padT, 10, 3);
-  ctx.fillStyle = '#B8D4F0'; ctx.fillText('CSAT', padL + 84, padT + 5);
-}
-
-
 </script>
 
 </body>
